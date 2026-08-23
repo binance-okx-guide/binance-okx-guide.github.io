@@ -2,113 +2,34 @@ import Link from "next/link";
 import { articles, topics } from "@/data/content";
 
 export default function Home() {
-  const featured = articles.slice(0, 6);
+  const hot = articles.slice(0, 12);
+  const searches = articles.filter((_,i)=>[0,1,2,6,7,12,18,19,24,30].includes(i));
+  const websiteLd={"@context":"https://schema.org","@type":"WebSite",name:"币圈老陈",url:"/",description:"2026币安、欧易注册下载、买USDT和出金教程",author:{"@type":"Person",name:"老陈"}};
+  return <main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteLd)}} />
+    <header className="site-header">
+      <Link className="brand" href="/"><span className="brand-mark">陈</span><span>币圈老陈</span></Link>
+      <nav aria-label="主导航"><a href="#binance">币安教程</a><a href="#okx">欧易教程</a><a href="#buy-usdt">买USDT</a><a href="#cash-out">USDT出金</a></nav>
+    </header>
+    <div className="keyword-bar">2026最新教程：币安注册 · 币安下载 · 欧易注册 · 欧易下载 · 买USDT · USDT出金</div>
 
-  return (
-    <main>
-      <header className="site-header">
-        <Link className="brand" href="/" aria-label="明链指南首页">
-          <span className="brand-mark">明</span>
-          <span>明链指南</span>
-        </Link>
-        <nav aria-label="主导航">
-          <a href="#topics">主题指南</a>
-          <a href="#latest">最新内容</a>
-          <a href="#method">编辑标准</a>
-        </nav>
-        <Link className="header-cta" href="/topics/security">先看安全指南</Link>
-      </header>
+    <section className="hero">
+      <div className="hero-main">
+        <span className="eyebrow">老陈的币圈新手实操笔记</span>
+        <h1>2026币安、欧易<br/>注册下载与买币教程</h1>
+        <p>我是在币圈折腾多年的老陈。这里不讲高深概念，只写新手最常卡住的币安注册、APP下载、欧易KYC、买USDT、手续费和出金问题。</p>
+        <div className="hero-actions"><Link className="primary-button" href="/articles/binance-register">看币安注册教程 →</Link><Link className="plain-button" href="/articles/okx-register">看欧易注册教程 →</Link></div>
+      </div>
+      <aside className="oldhand-card"><strong>老陈先说三句</strong><p>① 不懂的功能先别点</p><p>② 第一次转账先小额测试</p><p>③ 规则变得快，以官方当前页面为准</p><small>本站是个人经验分享，不代表任何交易所。</small></aside>
+    </section>
 
-      <section className="hero">
-        <div className="eyebrow"><span /> 面向中文用户的数字资产基础教育</div>
-        <h1>每一步都讲清楚，<br /><em>每个风险都标出来。</em></h1>
-        <p className="hero-copy">
-          从账户准备、身份核验到资金安全，我们用可复核的步骤、清晰的截图规范和持续更新记录，帮你先理解，再决定。
-        </p>
-        <div className="hero-actions">
-          <a className="primary-button" href="#topics">浏览六大主题 <span>↘</span></a>
-          <a className="text-link" href="#method">我们的内容如何审核 <span>→</span></a>
-        </div>
-        <div className="hero-metrics" aria-label="内容规模">
-          <div><strong>36</strong><span>首发核心指南</span></div>
-          <div><strong>6</strong><span>完整主题集群</span></div>
-          <div><strong>100%</strong><span>标注核验日期</span></div>
-        </div>
-        <div className="orbit" aria-hidden="true">
-          <div className="orbit-ring ring-one" />
-          <div className="orbit-ring ring-two" />
-          <span className="orbit-core">明</span>
-          <span className="orbit-label label-one">身份核验</span>
-          <span className="orbit-label label-two">资金安全</span>
-          <span className="orbit-label label-three">费用透明</span>
-        </div>
-      </section>
+    <section className="search-box"><h2>大家都在搜</h2><div>{searches.map(a=><Link key={a.slug} href={`/articles/${a.slug}`}>{a.keywords[0]}</Link>)}</div></section>
 
-      <section className="trust-strip" aria-label="内容原则">
-        <span>不承诺收益</span><i />
-        <span>不隐藏风险</span><i />
-        <span>不使用模糊链接</span><i />
-        <span>不替代专业意见</span>
-      </section>
+    <section className="section" id="topics"><header className="section-title"><h2>币安、欧易、买币出金完整教程</h2><p>按你现在遇到的问题直接找，不用从头学。</p></header><div className="topic-grid">{topics.map(topic=><section className="topic-card" id={topic.slug} key={topic.slug}><div className="topic-card-head"><span>{topic.icon}</span><div><h2>{topic.name}</h2><p>{topic.description}</p></div></div><ul>{articles.filter(a=>a.topic===topic.slug).map(a=><li key={a.slug}><Link href={`/articles/${a.slug}`}>{a.title}</Link></li>)}</ul><Link className="more-link" href={`/topics/${topic.slug}`}>查看全部{topic.shortName} →</Link></section>)}</div></section>
 
-      <section className="section" id="topics">
-        <div className="section-heading">
-          <div><span className="section-index">01</span><p>主题地图</p></div>
-          <h2>从第一次了解，<br />到建立自己的安全流程。</h2>
-        </div>
-        <div className="topic-grid">
-          {topics.map((topic, index) => (
-            <Link className="topic-card" href={`/topics/${topic.slug}`} key={topic.slug}>
-              <span className="topic-number">0{index + 1}</span>
-              <div className={`topic-icon tone-${index + 1}`} aria-hidden="true">{topic.icon}</div>
-              <h3>{topic.name}</h3>
-              <p>{topic.description}</p>
-              <footer><span>{topic.articleCount} 篇指南</span><b>↗</b></footer>
-            </Link>
-          ))}
-        </div>
-      </section>
+    <section className="section hot-section"><header className="section-title"><h2>新手最近常看的12篇</h2><p>都是直接解决注册、下载、买币和出金问题的文章。</p></header><div className="hot-list">{hot.map((a,i)=><Link href={`/articles/${a.slug}`} key={a.slug}><span>{String(i+1).padStart(2,"0")}</span><div><b>{a.title}</b><p>{a.description}</p></div></Link>)}</div></section>
 
-      <section className="section latest-section" id="latest">
-        <div className="section-heading compact">
-          <div><span className="section-index">02</span><p>编辑精选</p></div>
-          <h2>先读这六篇。</h2>
-        </div>
-        <div className="article-list">
-          {featured.map((article, index) => (
-            <Link className="article-row" href={`/articles/${article.slug}`} key={article.slug}>
-              <span className="article-index">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <span className="article-topic">{article.topicName}</span>
-                <h3>{article.title}</h3>
-              </div>
-              <p>{article.description}</p>
-              <span className="article-arrow">→</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="method" id="method">
-        <div className="method-copy">
-          <span className="section-index light">03</span>
-          <p className="method-kicker">编辑方法</p>
-          <h2>数量可以扩大，<br />标准不能稀释。</h2>
-          <p>自动化负责发现问题、建立提纲和安排更新；编辑负责验证事实、补充截图、检查链接和决定是否发布。</p>
-        </div>
-        <ol className="method-steps">
-          <li><span>01</span><div><strong>问题入库</strong><p>从真实搜索需求生成内容简报，不直接生成上线文章。</p></div></li>
-          <li><span>02</span><div><strong>事实核验</strong><p>逐项检查适用地区、更新时间、费用与风险提示。</p></div></li>
-          <li><span>03</span><div><strong>人工发布</strong><p>通过质量门槛后排期发布，并进入定期复审队列。</p></div></li>
-        </ol>
-      </section>
-
-      <footer className="footer">
-        <div className="brand footer-brand"><span className="brand-mark">明</span><span>明链指南</span></div>
-        <p>清楚地理解，谨慎地行动。</p>
-        <div><Link href="/topics/security">安全指南</Link><a href="#method">编辑标准</a></div>
-        <small>© 2026 明链指南 · 教育内容，不构成投资建议</small>
-      </footer>
-    </main>
-  );
+    <section className="about-oldchen"><div><span className="portrait">陈</span><h2>我是老陈，一个普通币圈老鸟</h2></div><p>踩过坑，也帮身边不少新手处理过注册、验证、转账不到账这些问题。我把搜索时最难找、客服话术里最绕的地方，尽量用人话写出来。页面会按平台界面和规则变化持续更新。</p></section>
+    <footer className="footer"><div className="brand"><span className="brand-mark">陈</span><span>币圈老陈</span></div><p>个人经验分享，不是机构，不代客操作，不承诺收益。数字资产存在风险，平台服务范围和规则可能变化，请以官方当前页面为准。</p><small>© 2026 币圈老陈</small></footer>
+  </main>;
 }
