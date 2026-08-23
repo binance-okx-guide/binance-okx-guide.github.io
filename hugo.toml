@@ -1,0 +1,25 @@
+title = "币圈老陈"
+languageCode = "zh-CN"
+locale = "zh-CN"
+defaultContentLanguage = "zh-cn"
+dataDir = "hugo-data"
+enableRobotsTXT = true
+enableGitInfo = false
+disableKinds = ["taxonomy", "term"]
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML"]
+page = ["HTML"]
+
+[params]
+description = "2026币安注册、币安APP下载、欧易OKX注册、邀请码、KYC、买USDT、手续费和USDT出金教程。"
+author = "老陈"
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.7
+filename = "sitemap.xml"
+
+[markup.goldmark.renderer]
+unsafe = true

@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ if .IsHome }}2026币安注册下载、欧易邀请码与USDT出金教程｜币圈老陈{{ else }}{{ .Title }}｜币圈老陈{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+{{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . "," }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}"><link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="币圈老陈"><meta property="og:title" content="{{ .Title }}"><meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"><meta property="og:url" content="{{ .Permalink }}"><meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+</head><body>
+<header class="site-header"><a class="brand" href="{{ "" | relURL }}"><span>陈</span><b>币圈老陈</b></a><nav><a href="{{ "topics/binance/" | relURL }}">币安教程</a><a href="{{ "topics/okx/" | relURL }}">欧易教程</a><a href="{{ "topics/buy-usdt/" | relURL }}">买USDT</a><a href="{{ "topics/cash-out/" | relURL }}">USDT出金</a></nav></header>
+{{ block "main" . }}{{ end }}
+<footer><b>币圈老陈</b><p>个人经验分享，不代表任何平台，不代客操作，不承诺收益。平台服务范围和规则可能变化，请以官方当前页面为准。</p><small>© {{ now.Year }} 币圈老陈</small></footer>
+</body></html>

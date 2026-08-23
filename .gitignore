@@ -38,3 +38,6 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+/hugo-public/
+/public-hugo/
+/.hugo_build.lock

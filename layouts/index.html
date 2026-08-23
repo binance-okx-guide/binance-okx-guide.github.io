@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="keyword-bar">2026最新教程：币安注册 · 币安下载 · 欧易注册 · 欧易下载 · 买USDT · USDT出金</div>
+<main>
+<section class="hero"><div><em>老陈的币圈新手实操笔记</em><h1>2026币安、欧易<br>注册下载与买币教程</h1><p>我是在币圈折腾多年的老陈。这里不讲高深概念，只写新手最常卡住的币安注册、APP下载、欧易KYC、买USDT、手续费和出金问题。</p><div class="actions"><a class="red" href="{{ "articles/binance-register/" | relURL }}">看币安注册教程 →</a><a href="{{ "articles/okx-register/" | relURL }}">看欧易注册教程 →</a></div></div><aside><strong>老陈先说三句</strong><p>① 不懂的功能先别点</p><p>② 第一次转账先小额测试</p><p>③ 规则变得快，以官方当前页面为准</p><small>本站是个人经验分享，不代表任何交易所。</small></aside></section>
+{{ $articles := where site.RegularPages "Section" "articles" }}
+<section class="searches"><h2>大家都在搜</h2><div>{{ range first 12 $articles }}<a href="{{ .RelPermalink }}">{{ index .Params.keywords 0 }}</a>{{ end }}</div></section>
+<section class="content-section"><header><h2>币安、欧易、买币出金完整教程</h2><p>按你现在遇到的问题直接找，不用从头学。</p></header><div class="topic-grid">{{ range hugo.Data.topics }}{{ $slug := .slug }}<article class="topic-card"><div class="topic-title"><span>{{ .icon }}</span><div><h2>{{ .name }}</h2><p>{{ .description }}</p></div></div><ul>{{ range first 6 (where $articles "Params.topic" $slug) }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul><a class="more" href="{{ printf "topics/%s/" .slug | relURL }}">查看全部{{ .shortName }} →</a></article>{{ end }}</div></section>
+<section class="about"><div><span>陈</span><h2>我是老陈，一个普通币圈老鸟</h2></div><p>踩过坑，也帮身边不少新手处理过注册、验证、转账不到账这些问题。我把搜索时最难找、客服话术里最绕的地方，尽量用人话写出来。页面会按平台界面和规则变化持续更新。</p></section>
+</main>{{ end }}
