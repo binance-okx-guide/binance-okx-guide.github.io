@@ -3,7 +3,7 @@ title: "支付宝可以卖USDT提现吗？出金风险说明"
 description: "支付宝收款出金的常见做法、限制和为什么不能只图方便。"
 date: 2026-08-18T08:00:00+08:00
 lastmod: 2026-08-18T08:00:00+08:00
-slug: "alipaysell-usdt"
+slug: "alipay-usdt-cash-out"
 topic: "cash-out"
 topicName: "USDT出金与提现"
 readingMinutes: 7

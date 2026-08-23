@@ -3,7 +3,7 @@ title: "欧易KYC认证要多久？失败原因怎么排查"
 description: "证件、人脸、姓名和审核状态的常见问题，以及不要反复提交的情况。"
 date: 2026-08-19T08:00:00+08:00
 lastmod: 2026-08-19T08:00:00+08:00
-slug: "okx-kyc"
+slug: "okx-kyc-review"
 topic: "okx"
 topicName: "欧易OKX注册与下载"
 readingMinutes: 5
