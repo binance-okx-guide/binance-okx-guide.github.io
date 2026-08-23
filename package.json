@@ -14,7 +14,9 @@
     "db:generate": "drizzle-kit generate",
     "content:plan": "node scripts/generate-content-plan.mjs --count=1000"
     ,"hugo:content": "node scripts/export-hugo-content.mjs"
-    ,"hugo:build": "npm run hugo:content && hugo --minify --destination hugo-public"
+    ,"hugo:build": "hugo --minify --destination hugo-public"
+    ,"content:draft": "node scripts/generate-drafts.mjs --count=3"
+    ,"content:audit": "node scripts/audit-content.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

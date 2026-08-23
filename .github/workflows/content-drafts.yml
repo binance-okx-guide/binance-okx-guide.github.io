@@ -1,0 +1,54 @@
+name: Generate review-only content drafts
+
+on:
+  schedule:
+    - cron: "23 1 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: Number of drafts (1-10)
+        required: false
+        default: "3"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Generate long-tail drafts
+        env:
+          DRAFT_COUNT: ${{ inputs.count || '3' }}
+        run: node scripts/generate-drafts.mjs --count="$DRAFT_COUNT"
+      - name: Run content quality gate
+        run: node scripts/audit-content.mjs
+      - name: Build Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.164.0"
+          extended: true
+      - run: hugo --minify --destination hugo-public
+      - name: Open a draft pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet; then
+            echo "No keyword briefs remain."
+            exit 0
+          fi
+          branch="content/auto-drafts-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add content/articles
+          git commit -m "Draft new long-tail articles for review"
+          git push origin "$branch"
+          gh pr create --draft --base main --head "$branch" --title "待审核：新增长尾关键词文章" --body "自动生成的内容草稿。合并前必须核对官方规则、原创截图、推荐关系和利益披露；此 PR 不会自动合并。"
