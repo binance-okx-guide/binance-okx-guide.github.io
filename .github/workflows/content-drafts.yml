@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Build long-tail keyword matrix
+        run: node scripts/build-keyword-matrix.mjs
       - name: Generate long-tail drafts
         env:
           DRAFT_COUNT: ${{ inputs.count || '3' }}

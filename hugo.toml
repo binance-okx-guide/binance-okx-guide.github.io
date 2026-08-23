@@ -1,5 +1,5 @@
 title = "币圈老陈"
-languageCode = "zh-CN"
+baseURL = "https://binance-okx-guide.github.io/"
 locale = "zh-CN"
 defaultContentLanguage = "zh-cn"
 dataDir = "hugo-data"

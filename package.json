@@ -15,6 +15,7 @@
     "content:plan": "node scripts/generate-content-plan.mjs --count=1000"
     ,"hugo:content": "node scripts/export-hugo-content.mjs"
     ,"hugo:build": "hugo --minify --destination hugo-public"
+    ,"content:matrix": "node scripts/build-keyword-matrix.mjs"
     ,"content:draft": "node scripts/generate-drafts.mjs --count=3"
     ,"content:audit": "node scripts/audit-content.mjs"
   },
