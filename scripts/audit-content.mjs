@@ -1,6 +1,6 @@
 import {readdir,readFile} from "node:fs/promises";
 const files=(await readdir("content/articles")).filter(x=>x.endsWith(".md"));
-const errors=[];const titles=new Map();
+const errors=[];const titles=new Map();const articleLines=[];
 for(const file of files){const text=await readFile(`content/articles/${file}`,"utf8");const title=text.match(/^title:\s*"([^"]+)"/m)?.[1];const description=text.match(/^description:\s*"([^"]+)"/m)?.[1];const slug=text.match(/^slug:\s*"([^"]+)"/m)?.[1];const body=text.split("---").slice(2).join("---").trim();
  if(!title||title.length<12||title.length>64)errors.push(`${file}: title length/format`);
  if(!description||description.length<20||description.length>120)errors.push(`${file}: description length/format`);
@@ -11,6 +11,14 @@ for(const file of files){const text=await readFile(`content/articles/${file}`,"u
  if(/bsmkweb|hnrvqbxkptm|gatewebsite/.test(body)&&!body.includes("老陈的邀请码"))errors.push(`${file}: referral copy must identify the author's invite code`);
  if(/保证收益|稳赚|无风险赚钱/.test(body))errors.push(`${file}: prohibited promise language`);
  if(title){if(titles.has(title))errors.push(`${file}: duplicate title with ${titles.get(title)}`);titles.set(title,file)}
+ const normalized=new Set(body.split(/\n+/).map(line=>line.replace(/<[^>]+>/g,"").replace(/[A-Za-z0-9_-]+/g,"#").trim()).filter(line=>line.length>28));
+ articleLines.push([file,normalized]);
+}
+for(let i=0;i<articleLines.length;i++)for(let j=i+1;j<articleLines.length;j++){
+ const [fileA,linesA]=articleLines[i];const [fileB,linesB]=articleLines[j];
+ const shared=[...linesA].filter(line=>linesB.has(line)).length;
+ const similarity=shared/new Set([...linesA,...linesB]).size;
+ if(similarity>0.85)errors.push(`${fileA} and ${fileB}: excessive template similarity (${similarity.toFixed(2)})`);
 }
 if(errors.length){console.error(errors.join("\n"));process.exit(1)}
 console.log(`Audited ${files.length} articles: all checks passed.`);
