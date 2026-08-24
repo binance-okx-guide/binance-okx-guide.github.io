@@ -40,7 +40,15 @@ function referralKeys(item){
 export function referralBox(item,position="top"){
   const keys=referralKeys(item);if(!keys.length)return "";
   const buttons=keys.map(key=>{const r=referrals[key];return `<a class="referral-button" href="${esc(r.url)}" target="_blank" rel="sponsored nofollow noopener">${r.name}推广入口（码：${r.code}）</a>`}).join("\n");
-  return `<aside class="referral-box referral-${position}"><strong>老陈使用的推广入口</strong><div class="referral-buttons">${buttons}</div><small>利益披露：通过上面的链接注册，我可能获得平台提供的推广奖励，你的实际权益以注册页显示为准。这些是推广落地页，不等于官网域名；打开后请再次核对最终跳转地址、地区规则和页面信息。</small></aside>`;
+  const hasBinance=keys.includes("binance");
+  const title=hasBinance?"账户注册与 20% 手续费优惠设置":"账户注册与手续费优惠设置";
+  const setup=hasBinance
+    ?`在注册页面看到「有邀请人」「推荐码」或类似选项时，填写老陈的邀请码 <b>${referrals.binance.code}</b>。只有注册页明确显示 20% 交易手续费返还时，才按该比例理解；提交前先截图保存页面显示。若账户同时符合 BNB 支付现货手续费的当前优惠条件，按“20%返还后再享25% BNB抵扣”计算，等效最高可比基础费率低约40%，具体产品和比例以账户费率页为准。`
+    :`在注册页面找到邀请码或推荐码一栏，填写上方老陈的邀请码。提交前确认页面已经接受代码，并查看账户实际显示的优惠比例；不同地区、产品和活动时间可能不同。`;
+  const note=hasBinance
+    ?"注：注册完成后通常不能直接补填推荐关系。网上流传的“冷置180天即可补填”没有查到币安当前官方规则支持，不建议为了补码停用账户或重复注册。"
+    :"注：邀请码是否可以补填、优惠持续多久，以注册页面和账户实际显示为准。";
+  return `<aside class="referral-box referral-${position}"><strong>${title}</strong><p>${setup}</p><div class="referral-buttons">${buttons}</div><small>${note} 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>`;
 }
 
 function inferIntent(item){
@@ -160,9 +168,9 @@ ${issues.map(([a,b])=>`| ${a} | ${b} |`).join("\n")}
 
 常见原因是 APP 版本、手机系统、账号地区或平台灰度更新不同。按功能名称寻找，不要只认颜色和按钮位置；涉及资金或身份资料时，看不懂就先停。
 
-### 邀请码填了以后一定有返佣吗？
+### 邀请码填了以后一定有手续费优惠吗？
 
-不能这样保证。要看注册页面是否接受、账户是否成功绑定、活动期限和适用产品。本文列出的代码是老陈的推广代码，可能给我带来推广收益。
+要看注册页面是否接受、账户是否成功绑定、活动期限和适用产品。本文列出的是老陈的邀请码；币安页面若明确显示 20% 返还，可按页面显示操作，没有显示就不要只凭教程假定已经生效。
 
 ### 能让别人代注册、代认证或代提现吗？
 

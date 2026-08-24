@@ -7,7 +7,7 @@ const slugs=["binance-register","binance-app-download","binance-invite-code","bi
 await rm("content/articles",{recursive:true,force:true});
 await mkdir("content/articles",{recursive:true});await mkdir("content/topics",{recursive:true});await mkdir("hugo-data",{recursive:true});
 for(const [index,article] of articles.entries()){
-  const item={...article,slug:slugs[index],primaryKeyword:article.keywords[0],readingMinutes:12};
+  const item={...article,slug:slugs[index],primaryKeyword:article.keywords[0],readingMinutes:12,updated:"2026-08-24"};
   await writeFile(`content/articles/${item.slug}.md`,renderArticle(item));
 }
 await writeFile("content/topics/_index.md",`---\ntitle: "全部新手教程"\ndescription: "币安、欧易、买USDT、USDT出金、手续费和账户安全教程。"\nslug: "topics"\n---\n`);

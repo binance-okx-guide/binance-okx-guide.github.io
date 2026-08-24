@@ -8,7 +8,7 @@ for(const file of files){const text=await readFile(`content/articles/${file}`,"u
  if((body.match(/^## /gm)??[]).length<3)errors.push(`${file}: fewer than 3 H2 sections`);
  if(body.length<3000)errors.push(`${file}: heavy article body is too short (${body.length})`);
  if(/bsmkweb|hnrvqbxkptm|gatewebsite/.test(body)&&!body.includes('rel="sponsored nofollow noopener"'))errors.push(`${file}: referral link is missing sponsored/nofollow disclosure`);
- if(/bsmkweb|hnrvqbxkptm|gatewebsite/.test(body)&&!body.includes("利益披露"))errors.push(`${file}: referral link is missing interest disclosure`);
+ if(/bsmkweb|hnrvqbxkptm|gatewebsite/.test(body)&&!body.includes("老陈的邀请码"))errors.push(`${file}: referral copy must identify the author's invite code`);
  if(/保证收益|稳赚|无风险赚钱/.test(body))errors.push(`${file}: prohibited promise language`);
  if(title){if(titles.has(title))errors.push(`${file}: duplicate title with ${titles.get(title)}`);titles.set(title,file)}
 }
