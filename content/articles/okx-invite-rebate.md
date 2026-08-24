@@ -15,7 +15,7 @@ keywords:
 
 <div class="quick" id="结论"><strong>老陈先说结论</strong><p>欧易推荐码是否生效、优惠在哪里看，以及规则变化时怎么核对。 真正要紧的是入口、实名、页面提示和资金记录都由自己复核。界面、地区服务和活动规则随时可能变，动手前再看一遍平台当天页面。</p></div>
 
-<aside class="referral-box referral-top"><strong>账户注册与手续费优惠设置</strong><p>在注册页面找到邀请码或推荐码一栏，填写上方老陈的邀请码。提交前确认页面已经接受代码，并查看账户实际显示的优惠比例；不同地区、产品和活动时间可能不同。</p><div class="referral-buttons"><a class="referral-button" href="https://www.hnrvqbxkptm.org/join/BTCETH8" target="_blank" rel="sponsored nofollow noopener">欧易 OKX推广入口（码：BTCETH8）</a></div><small>注：邀请码是否可以补填、优惠持续多久，以注册页面和账户实际显示为准。 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>
+<aside class="referral-box referral-top"><strong>账户注册与手续费优惠设置</strong><p>在注册页面找到「邀请码」或「推荐码」，填写上方老陈的邀请码。<br><b>作用：</b>成功绑定后，可按注册页面显示享受对应的手续费优惠或活动权益。</p><div class="referral-buttons"><a class="referral-button" href="https://www.hnrvqbxkptm.org/join/BTCETH8" target="_blank" rel="sponsored nofollow noopener">注册欧易 OKX（邀请码：BTCETH8）</a></div><small>注：邀请码最好在注册时一次填对，注册后通常无法直接补填。</small></aside>
 
 很多人搜“欧易邀请码返佣”，不是想听一堆币圈概念，而是现在就卡在某个按钮、验证码或订单上。下面我按自己带新手时最常用的顺序讲：先准备什么、每一步看什么、失败怎么排查，最后再把容易损失资金的坑集中列出来。
 
@@ -66,7 +66,7 @@ keywords:
 
 操作时先看清页面里的账号、地区、金额、网络或收款人，再点下一步。搜索“欧易邀请码返佣”的人最容易在这里照着旧截图硬找按钮，但平台经常改版，应该认功能名称和完整提示。遇到不同页面先截图，不要连续提交，也不要让群里的陌生人远程代操作。
 
-<aside class="referral-box referral-middle"><strong>账户注册与手续费优惠设置</strong><p>在注册页面找到邀请码或推荐码一栏，填写上方老陈的邀请码。提交前确认页面已经接受代码，并查看账户实际显示的优惠比例；不同地区、产品和活动时间可能不同。</p><div class="referral-buttons"><a class="referral-button" href="https://www.hnrvqbxkptm.org/join/BTCETH8" target="_blank" rel="sponsored nofollow noopener">欧易 OKX推广入口（码：BTCETH8）</a></div><small>注：邀请码是否可以补填、优惠持续多久，以注册页面和账户实际显示为准。 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>
+<aside class="referral-box referral-middle"><strong>账户注册与手续费优惠设置</strong><p>在注册页面找到「邀请码」或「推荐码」，填写上方老陈的邀请码。<br><b>作用：</b>成功绑定后，可按注册页面显示享受对应的手续费优惠或活动权益。</p><div class="referral-buttons"><a class="referral-button" href="https://www.hnrvqbxkptm.org/join/BTCETH8" target="_blank" rel="sponsored nofollow noopener">注册欧易 OKX（邀请码：BTCETH8）</a></div><small>注：邀请码最好在注册时一次填对，注册后通常无法直接补填。</small></aside>
 
 ## 页面怎么核对，才不容易进错站？ {#入口核对}
 
@@ -133,6 +133,6 @@ keywords:
 
 先不要。把完整报错、提交时间、设备和账号状态保存下来，逐项核对后再处理。涉及账户限制时，从平台内帮助中心进入申诉流程。
 
-<aside class="referral-box referral-bottom"><strong>账户注册与手续费优惠设置</strong><p>在注册页面找到邀请码或推荐码一栏，填写上方老陈的邀请码。提交前确认页面已经接受代码，并查看账户实际显示的优惠比例；不同地区、产品和活动时间可能不同。</p><div class="referral-buttons"><a class="referral-button" href="https://www.hnrvqbxkptm.org/join/BTCETH8" target="_blank" rel="sponsored nofollow noopener">欧易 OKX推广入口（码：BTCETH8）</a></div><small>注：邀请码是否可以补填、优惠持续多久，以注册页面和账户实际显示为准。 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>
+<aside class="referral-box referral-bottom"><strong>账户注册与手续费优惠设置</strong><p>在注册页面找到「邀请码」或「推荐码」，填写上方老陈的邀请码。<br><b>作用：</b>成功绑定后，可按注册页面显示享受对应的手续费优惠或活动权益。</p><div class="referral-buttons"><a class="referral-button" href="https://www.hnrvqbxkptm.org/join/BTCETH8" target="_blank" rel="sponsored nofollow noopener">注册欧易 OKX（邀请码：BTCETH8）</a></div><small>注：邀请码最好在注册时一次填对，注册后通常无法直接补填。</small></aside>
 
 <div class="notice"><strong>最后提醒：</strong>这篇内容按新手真实搜索问题整理。平台规则与页面会变化；发现内容过期时，以平台当天页面为准。</div>

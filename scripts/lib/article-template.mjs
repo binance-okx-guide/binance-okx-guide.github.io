@@ -39,16 +39,16 @@ function referralKeys(item){
 
 export function referralBox(item,position="top"){
   const keys=referralKeys(item);if(!keys.length)return "";
-  const buttons=keys.map(key=>{const r=referrals[key];return `<a class="referral-button" href="${esc(r.url)}" target="_blank" rel="sponsored nofollow noopener">${r.name}推广入口（码：${r.code}）</a>`}).join("\n");
   const hasBinance=keys.includes("binance");
   const title=hasBinance?"账户注册与 20% 手续费优惠设置":"账户注册与手续费优惠设置";
   const setup=hasBinance
-    ?`在注册页面看到「有邀请人」「推荐码」或类似选项时，填写老陈的邀请码 <b>${referrals.binance.code}</b>。只有注册页明确显示 20% 交易手续费返还时，才按该比例理解；提交前先截图保存页面显示。若账户同时符合 BNB 支付现货手续费的当前优惠条件，按“20%返还后再享25% BNB抵扣”计算，等效最高可比基础费率低约40%，具体产品和比例以账户费率页为准。`
-    :`在注册页面找到邀请码或推荐码一栏，填写上方老陈的邀请码。提交前确认页面已经接受代码，并查看账户实际显示的优惠比例；不同地区、产品和活动时间可能不同。`;
+    ?`在注册的最后一步，务必勾选「有邀请人」，并在邀请码一栏输入：<b>${referrals.binance.code}</b>。<br><b>作用：</b>成功绑定后可享受 <b>20% 交易手续费返还</b>；如果同时开启 BNB 手续费抵扣，按当前费率组合计算，最高相当于手续费打 6 折。`
+    :`在注册页面找到「邀请码」或「推荐码」，填写上方老陈的邀请码。<br><b>作用：</b>成功绑定后，可按注册页面显示享受对应的手续费优惠或活动权益。`;
   const note=hasBinance
-    ?"注：注册完成后通常不能直接补填推荐关系。网上流传的“冷置180天即可补填”没有查到币安当前官方规则支持，不建议为了补码停用账户或重复注册。"
-    :"注：邀请码是否可以补填、优惠持续多久，以注册页面和账户实际显示为准。";
-  return `<aside class="referral-box referral-${position}"><strong>${title}</strong><p>${setup}</p><div class="referral-buttons">${buttons}</div><small>${note} 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>`;
+    ?"注：邀请码最好在注册时一次填对。注册完成后通常不能直接补填，不要先跳过、事后再找入口。"
+    :"注：邀请码最好在注册时一次填对，注册后通常无法直接补填。";
+  const actionButtons=keys.map(key=>{const r=referrals[key];const benefit=key==="binance"?" · 享20%手续费返还":"";return `<a class="referral-button" href="${esc(r.url)}" target="_blank" rel="sponsored nofollow noopener">注册${r.name}${benefit}（邀请码：${r.code}）</a>`}).join("\n");
+  return `<aside class="referral-box referral-${position}"><strong>${title}</strong><p>${setup}</p><div class="referral-buttons">${actionButtons}</div><small>${note}</small></aside>`;
 }
 
 function inferIntent(item){

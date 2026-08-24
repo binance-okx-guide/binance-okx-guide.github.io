@@ -15,7 +15,7 @@ keywords:
 
 <div class="quick" id="结论"><strong>老陈先说结论</strong><p>邀请码填写位置、什么时候生效，以及注册完成后没有邀请码怎么办。 真正要紧的是入口、实名、页面提示和资金记录都由自己复核。界面、地区服务和活动规则随时可能变，动手前再看一遍平台当天页面。</p></div>
 
-<aside class="referral-box referral-top"><strong>账户注册与 20% 手续费优惠设置</strong><p>在注册页面看到「有邀请人」「推荐码」或类似选项时，填写老陈的邀请码 <b>BTCETH178</b>。只有注册页明确显示 20% 交易手续费返还时，才按该比例理解；提交前先截图保存页面显示。若账户同时符合 BNB 支付现货手续费的当前优惠条件，按“20%返还后再享25% BNB抵扣”计算，等效最高可比基础费率低约40%，具体产品和比例以账户费率页为准。</p><div class="referral-buttons"><a class="referral-button" href="https://www.bsmkweb.cc/join?ref=BTCETH178" target="_blank" rel="sponsored nofollow noopener">币安推广入口（码：BTCETH178）</a></div><small>注：注册完成后通常不能直接补填推荐关系。网上流传的“冷置180天即可补填”没有查到币安当前官方规则支持，不建议为了补码停用账户或重复注册。 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>
+<aside class="referral-box referral-top"><strong>账户注册与 20% 手续费优惠设置</strong><p>在注册的最后一步，务必勾选「有邀请人」，并在邀请码一栏输入：<b>BTCETH178</b>。<br><b>作用：</b>成功绑定后可享受 <b>20% 交易手续费返还</b>；如果同时开启 BNB 手续费抵扣，按当前费率组合计算，最高相当于手续费打 6 折。</p><div class="referral-buttons"><a class="referral-button" href="https://www.bsmkweb.cc/join?ref=BTCETH178" target="_blank" rel="sponsored nofollow noopener">注册币安 · 享20%手续费返还（邀请码：BTCETH178）</a></div><small>注：邀请码最好在注册时一次填对。注册完成后通常不能直接补填，不要先跳过、事后再找入口。</small></aside>
 
 很多人搜“币安邀请码”，不是想听一堆币圈概念，而是现在就卡在某个按钮、验证码或订单上。下面我按自己带新手时最常用的顺序讲：先准备什么、每一步看什么、失败怎么排查，最后再把容易损失资金的坑集中列出来。
 
@@ -66,7 +66,7 @@ keywords:
 
 操作时先看清页面里的账号、地区、金额、网络或收款人，再点下一步。搜索“币安邀请码”的人最容易在这里照着旧截图硬找按钮，但平台经常改版，应该认功能名称和完整提示。遇到不同页面先截图，不要连续提交，也不要让群里的陌生人远程代操作。
 
-<aside class="referral-box referral-middle"><strong>账户注册与 20% 手续费优惠设置</strong><p>在注册页面看到「有邀请人」「推荐码」或类似选项时，填写老陈的邀请码 <b>BTCETH178</b>。只有注册页明确显示 20% 交易手续费返还时，才按该比例理解；提交前先截图保存页面显示。若账户同时符合 BNB 支付现货手续费的当前优惠条件，按“20%返还后再享25% BNB抵扣”计算，等效最高可比基础费率低约40%，具体产品和比例以账户费率页为准。</p><div class="referral-buttons"><a class="referral-button" href="https://www.bsmkweb.cc/join?ref=BTCETH178" target="_blank" rel="sponsored nofollow noopener">币安推广入口（码：BTCETH178）</a></div><small>注：注册完成后通常不能直接补填推荐关系。网上流传的“冷置180天即可补填”没有查到币安当前官方规则支持，不建议为了补码停用账户或重复注册。 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>
+<aside class="referral-box referral-middle"><strong>账户注册与 20% 手续费优惠设置</strong><p>在注册的最后一步，务必勾选「有邀请人」，并在邀请码一栏输入：<b>BTCETH178</b>。<br><b>作用：</b>成功绑定后可享受 <b>20% 交易手续费返还</b>；如果同时开启 BNB 手续费抵扣，按当前费率组合计算，最高相当于手续费打 6 折。</p><div class="referral-buttons"><a class="referral-button" href="https://www.bsmkweb.cc/join?ref=BTCETH178" target="_blank" rel="sponsored nofollow noopener">注册币安 · 享20%手续费返还（邀请码：BTCETH178）</a></div><small>注：邀请码最好在注册时一次填对。注册完成后通常不能直接补填，不要先跳过、事后再找入口。</small></aside>
 
 ## 页面怎么核对，才不容易进错站？ {#入口核对}
 
@@ -133,6 +133,6 @@ keywords:
 
 先不要。把完整报错、提交时间、设备和账号状态保存下来，逐项核对后再处理。涉及账户限制时，从平台内帮助中心进入申诉流程。
 
-<aside class="referral-box referral-bottom"><strong>账户注册与 20% 手续费优惠设置</strong><p>在注册页面看到「有邀请人」「推荐码」或类似选项时，填写老陈的邀请码 <b>BTCETH178</b>。只有注册页明确显示 20% 交易手续费返还时，才按该比例理解；提交前先截图保存页面显示。若账户同时符合 BNB 支付现货手续费的当前优惠条件，按“20%返还后再享25% BNB抵扣”计算，等效最高可比基础费率低约40%，具体产品和比例以账户费率页为准。</p><div class="referral-buttons"><a class="referral-button" href="https://www.bsmkweb.cc/join?ref=BTCETH178" target="_blank" rel="sponsored nofollow noopener">币安推广入口（码：BTCETH178）</a></div><small>注：注册完成后通常不能直接补填推荐关系。网上流传的“冷置180天即可补填”没有查到币安当前官方规则支持，不建议为了补码停用账户或重复注册。 上述按钮是带老陈邀请码的推广入口，不是官网域名；打开后请核对最终跳转地址。</small></aside>
+<aside class="referral-box referral-bottom"><strong>账户注册与 20% 手续费优惠设置</strong><p>在注册的最后一步，务必勾选「有邀请人」，并在邀请码一栏输入：<b>BTCETH178</b>。<br><b>作用：</b>成功绑定后可享受 <b>20% 交易手续费返还</b>；如果同时开启 BNB 手续费抵扣，按当前费率组合计算，最高相当于手续费打 6 折。</p><div class="referral-buttons"><a class="referral-button" href="https://www.bsmkweb.cc/join?ref=BTCETH178" target="_blank" rel="sponsored nofollow noopener">注册币安 · 享20%手续费返还（邀请码：BTCETH178）</a></div><small>注：邀请码最好在注册时一次填对。注册完成后通常不能直接补填，不要先跳过、事后再找入口。</small></aside>
 
 <div class="notice"><strong>最后提醒：</strong>这篇内容按新手真实搜索问题整理。平台规则与页面会变化；发现内容过期时，以平台当天页面为准。</div>
