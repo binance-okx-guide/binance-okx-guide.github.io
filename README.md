@@ -2,6 +2,8 @@
 
 面向中文新手的币安、欧易、买 USDT、USDT 出金和手续费长尾教程站。
 
+**在线访问：[https://binance-okx-guide.github.io/](https://binance-okx-guide.github.io/)**
+
 ## 本地预览
 
 ```bash
@@ -23,3 +25,5 @@ npm run hugo:build
 - `scripts/export-hugo-content.mjs`：把核心内容导出为 Hugo Markdown。
 - `scripts/generate-content-plan.mjs`：生成 1,000 个待人工审核的长尾选题。
 - `content/articles/`：实际参与搜索引擎收录的文章源文件。
+
+工作日北京时间 09:23 自动生成 3 篇长尾文章。只有内容审计和 Hugo 构建全部通过，文章才会提交到 `main` 并由 GitHub Pages 自动发布；任一检查失败都会终止上线。
