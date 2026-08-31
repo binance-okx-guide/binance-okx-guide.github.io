@@ -1,0 +1,34 @@
+{{- if hugo.IsProduction -}}
+{{- with site.Params.googleAnalyticsID }}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('a.referral-button');
+    if (!link) return;
+
+    var href = link.href || '';
+    var exchange = href.indexOf('bsmkweb') !== -1 ? 'binance'
+      : href.indexOf('hnrvqbxkptm') !== -1 ? 'okx'
+      : href.indexOf('gatewebsite') !== -1 ? 'gate'
+      : 'unknown';
+    var box = link.closest('.referral-box');
+    var position = box && box.classList.contains('referral-top') ? 'top'
+      : box && box.classList.contains('referral-middle') ? 'middle'
+      : 'other';
+
+    gtag('event', 'referral_click', {
+      exchange: exchange,
+      link_position: position,
+      link_url: href,
+      page_path: window.location.pathname
+    });
+  });
+</script>
+{{- end }}
+{{- end }}
