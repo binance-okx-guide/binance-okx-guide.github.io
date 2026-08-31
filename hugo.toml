@@ -15,6 +15,7 @@ page = ["HTML"]
 [params]
 description = "2026币安注册、币安APP下载、欧易OKX注册、邀请码、KYC、买USDT、手续费和USDT出金教程。"
 author = "老陈"
+googleAnalyticsID = "G-HX6E20VSZ8"
 
 [sitemap]
 changefreq = "weekly"
