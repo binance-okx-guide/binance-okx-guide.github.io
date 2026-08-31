@@ -43,13 +43,13 @@ jobs:
       - run: hugo --minify --destination hugo-public
       - name: Publish audited articles to main
         run: |
-          if git diff --quiet; then
+          git add content/articles
+          if git diff --cached --quiet; then
             echo "No keyword briefs remain."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/articles
           git commit -m "Publish audited long-tail articles"
           git pull --rebase origin main
           git push origin HEAD:main
