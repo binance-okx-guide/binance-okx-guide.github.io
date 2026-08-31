@@ -5,6 +5,7 @@
 {{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . "," }}">{{ end }}
 <link rel="canonical" href="{{ .Permalink }}"><link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="币圈老陈"><meta property="og:title" content="{{ .Title }}"><meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}"><meta property="og:url" content="{{ .Permalink }}"><meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ partial "google-analytics.html" . }}
 </head><body>
 <header class="site-header"><a class="brand" href="{{ "" | relURL }}"><span>陈</span><b>币圈老陈</b></a><nav><a href="{{ "topics/binance/" | relURL }}">币安教程</a><a href="{{ "topics/okx/" | relURL }}">欧易教程</a><a href="{{ "topics/buy-usdt/" | relURL }}">买USDT</a><a href="{{ "topics/cash-out/" | relURL }}">USDT出金</a></nav></header>
 {{ block "main" . }}{{ end }}
